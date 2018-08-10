@@ -13,7 +13,10 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
-
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
   {% set container_class = "container " %}
   {% if theme.sidebar.position %}
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
@@ -88,5 +91,9 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
+
+<script type="text/javascript"
+color="255,255,255" opacity='1' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<script type="text/javascript" src="/js/src/love.js"></script>
 </body>
 </html>
